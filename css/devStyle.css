@@ -1,0 +1,14 @@
+.class_1 {
+  color: red;
+}
+.class_1:hover {
+  border: 1px solid red;
+}
+.class_2 {
+  color: red;
+  margin-top: 10px;
+  padding: 150px;
+}
+.class_2:hover {
+  border: 1px solid red;
+}

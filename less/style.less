@@ -1,0 +1,42 @@
+//@import 'variables.less';
+@import 'import.less';
+
+
+.generate-columns(norm, 12);
+
+@media (min-width: @screen-sm-min) {
+  .generate-columns(sm, 12 );
+}
+
+@media (min-width: @screen-md-min) {
+  .generate-columns(sm, 12 );
+}
+
+@media (min-width: @screen-lg-min) {
+  .generate-columns(sm, 12 );
+}
+
+
+///*сетка обычная*/
+//.make-grid(xs);
+//
+///*сетка для маленьких*/
+//@media (min-width: @screen-sm-min) {
+//  .make-grid(sm);
+//}
+//
+///*сетка для средненьких*/
+//@media (min-width: @screen-md-min) {
+//  .make-grid(md);
+//}
+//
+///*сетка для большых*/
+//@media (min-width: @screen-lg-min) {
+//  .make-grid(lg);
+//}
+
+/*строка*/
+.row{
+  .make-row(30);
+  .clearfix();
+}

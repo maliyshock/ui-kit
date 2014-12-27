@@ -1,0 +1,35 @@
+.generate-columns( @type, @n, @i: 1) when (@i =< @n) and (@type = norm) { // Условие выполнения!
+  // @n — количество колонок
+  // @i — внутренний счетчик от 1 до @n
+  // Собственно, генерация
+
+  .col-@{i} {
+    width: (@i * 100% / @n);
+  }
+
+  // Рекурсовный самовызов с цвеличенным на 1 счетчиком
+  .generate-columns(@type, @n, (@i + 1));
+}
+
+.generate-columns(@type, @n, @i: 1) when (@i =< @n) and (@type = sm) {
+  .col-@{type}-@{i} {
+    width: percentage((@i / @n));
+  }
+
+  .generate-columns(@type, @n, (@i + 1));
+}
+
+.generate-columns(@type, @n, @i: 1) when (@i =< @n) and (@type = md) {
+  .col-@{type}-@{i} {
+    width: percentage((@i / @n));
+  }
+
+  .generate-columns(@type, @n, (@i + 1));
+}
+.generate-columns(@type, @n, @i: 1) when (@i =< @n) and (@type = lg) {
+  .col-@{type}-@{i} {
+    width: percentage((@i / @n));
+  }
+
+  .generate-columns(@type, @n, (@i + 1));
+}
